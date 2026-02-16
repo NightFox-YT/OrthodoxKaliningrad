@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://cilmxl1fs085e"]
+
+[ext_resource type="Script" uid="uid://r5vdjwqc0cjy" path="res://scripts/map.gd" id="1_p5pve"]
+[ext_resource type="Texture2D" uid="uid://dr4a5vhgyqe34" path="res://sprites/map.png" id="2_urblq"]
+[ext_resource type="Texture2D" uid="uid://hcmp3h3uaasq" path="res://sprites/Church.png" id="4_71pa8"]
+[ext_resource type="Texture2D" uid="uid://ctcn2csy7063" path="res://sprites/Cathedral.png" id="4_oysan"]
+[ext_resource type="Texture2D" uid="uid://c0c3kvsno2t6p" path="res://sprites/Kypelka.png" id="5_sb2pt"]
+[ext_resource type="Texture2D" uid="uid://brv3tdsbe5koh" path="res://sprites/Derzhavnaya.png" id="6_0t07s"]
+[ext_resource type="Texture2D" uid="uid://j7gq8gk4rtsh" path="res://sprites/MonasteryEkaterina.png" id="7_6qsgm"]
+[ext_resource type="Texture2D" uid="uid://bqo70wbr8qmpv" path="res://sprites/MonasteryElasavet.png" id="8_ooc2g"]
+[ext_resource type="Texture2D" uid="uid://fnnxx3qgr1vh" path="res://sprites/Gymnasya1.png" id="9_2wwcf"]
+[ext_resource type="Texture2D" uid="uid://ca2iwj5dax6t" path="res://sprites/Skit.png" id="10_wbpbn"]
+
+[sub_resource type="Animation" id="Animation_oysan"]
+resource_name = "point_pressed"
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sb2pt"]
+_data = {
+&"point_pressed": SubResource("Animation_oysan")
+}
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_p5pve")
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Map" type="TextureRect" parent="Canvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_urblq")
+
+[node name="Church" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 362.0
+offset_top = 388.0
+offset_right = 400.0
+offset_bottom = 432.0
+icon = ExtResource("4_71pa8")
+expand_icon = true
+
+[node name="Cathedral" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 367.0
+offset_top = 343.0
+offset_right = 405.0
+offset_bottom = 387.0
+icon = ExtResource("4_oysan")
+expand_icon = true
+
+[node name="Kypelka" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 326.0
+offset_top = 329.0
+offset_right = 364.0
+offset_bottom = 372.0
+icon = ExtResource("5_sb2pt")
+expand_icon = true
+
+[node name="Derzhavnaya" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 315.0
+offset_top = 374.0
+offset_right = 353.0
+offset_bottom = 417.0
+icon = ExtResource("6_0t07s")
+expand_icon = true
+
+[node name="MonasteryEkaterina" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 416.0
+offset_top = 368.0
+offset_right = 454.0
+offset_bottom = 414.0
+icon = ExtResource("7_6qsgm")
+expand_icon = true
+
+[node name="MonasteryElasavet" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 748.0
+offset_top = 201.0
+offset_right = 786.0
+offset_bottom = 245.0
+icon = ExtResource("8_ooc2g")
+expand_icon = true
+
+[node name="Gymnasya1" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 367.0
+offset_top = 298.0
+offset_right = 405.0
+offset_bottom = 341.0
+icon = ExtResource("9_2wwcf")
+expand_icon = true
+
+[node name="Skit" type="Button" parent="Canvas" groups=["map_points"]]
+offset_left = 732.0
+offset_top = 153.0
+offset_right = 770.0
+offset_bottom = 197.0
+icon = ExtResource("10_wbpbn")
+expand_icon = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sb2pt")
+}

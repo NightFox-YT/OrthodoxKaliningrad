@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d34yss7lowkeq"]
+
+[ext_resource type="Script" uid="uid://d4ge5l2parhxb" path="res://scripts/info.gd" id="1_fg2qe"]
+[ext_resource type="LabelSettings" uid="uid://b1abavj52rj02" path="res://settings/title_settings.tres" id="2_tk7c1"]
+
+[sub_resource type="Gradient" id="Gradient_tk7c1"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_y06mq"]
+gradient = SubResource("Gradient_tk7c1")
+
+[node name="Info" type="Node2D" unique_id=1421098541]
+script = ExtResource("1_fg2qe")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1478047885]
+
+[node name="Image" type="TextureRect" parent="Canvas" unique_id=807149648]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -184.0
+offset_top = 25.0
+offset_right = 184.0
+offset_bottom = 453.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture1D_y06mq")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Canvas" unique_id=701797230]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Example title"
+label_settings = ExtResource("2_tk7c1")
+horizontal_alignment = 1
+clip_text = true
+
+[node name="ExitBtn" type="Button" parent="Canvas" unique_id=1227142476]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -74.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "X"
+icon_alignment = 1

@@ -1,0 +1,342 @@
+[gd_scene format=3 uid="uid://cilmxl1fs085e"]
+
+[ext_resource type="Script" uid="uid://r5vdjwqc0cjy" path="res://scripts/map.gd" id="1_p5pve"]
+[ext_resource type="Texture2D" uid="uid://dr4a5vhgyqe34" path="res://sprites/map.png" id="2_urblq"]
+[ext_resource type="Texture2D" uid="uid://ce6rg5doxetg" path="res://sprites/Cathedral3Saints.png" id="4_4sf5t"]
+[ext_resource type="Texture2D" uid="uid://bwiuvgienc386" path="res://sprites/Church1WW.png" id="4_jk4ss"]
+[ext_resource type="Texture2D" uid="uid://2p3friue5043" path="res://sprites/ChurchDimitry.png" id="4_jky6x"]
+[ext_resource type="Texture2D" uid="uid://ctcn2csy7063" path="res://sprites/CathedralChrist.png" id="4_oysan"]
+[ext_resource type="Texture2D" uid="uid://c0c3kvsno2t6p" path="res://sprites/Kypelka.png" id="5_sb2pt"]
+[ext_resource type="Texture2D" uid="uid://brv3tdsbe5koh" path="res://sprites/Derzhavnaya.png" id="6_0t07s"]
+[ext_resource type="Texture2D" uid="uid://bl2hgvai0b73y" path="res://sprites/ChurchAdrian.png" id="6_meq34"]
+[ext_resource type="Texture2D" uid="uid://cdxvpb7eqblgb" path="res://sprites/ChurchGeorgiy.png" id="6_r5om4"]
+[ext_resource type="Texture2D" uid="uid://j7gq8gk4rtsh" path="res://sprites/MonasteryEkaterina.png" id="7_6qsgm"]
+[ext_resource type="Texture2D" uid="uid://hvuu0ea87u38" path="res://sprites/ChurchGospodnya.png" id="7_jky6x"]
+[ext_resource type="Texture2D" uid="uid://48txvg4fkrg4" path="res://sprites/ChurchIoann.png" id="8_4sf5t"]
+[ext_resource type="Texture2D" uid="uid://bqo70wbr8qmpv" path="res://sprites/MonasteryElasavet.png" id="8_ooc2g"]
+[ext_resource type="Texture2D" uid="uid://fnnxx3qgr1vh" path="res://sprites/Gymnasya1.png" id="9_2wwcf"]
+[ext_resource type="Texture2D" uid="uid://cqr840byovisj" path="res://sprites/ChurchKazan.png" id="9_3mr0t"]
+[ext_resource type="Texture2D" uid="uid://cd1pyqmcw3hww" path="res://sprites/ChurchNevskii.png" id="10_6sq2s"]
+[ext_resource type="Texture2D" uid="uid://ca2iwj5dax6t" path="res://sprites/Skit.png" id="10_wbpbn"]
+[ext_resource type="Texture2D" uid="uid://bv1i306lbg44" path="res://sprites/ChurchPetrPavel.png" id="11_4v3wx"]
+[ext_resource type="Texture2D" uid="uid://6yeiuauqddbl" path="res://sprites/ChurchMichael.png" id="11_y1wlr"]
+[ext_resource type="Texture2D" uid="uid://c2g7ugdmvyca1" path="res://sprites/ChurchRadoneshskii.png" id="12_y1wlr"]
+[ext_resource type="Texture2D" uid="uid://c5rqg7abn60cq" path="res://sprites/ChurchTihon.png" id="13_4v3wx"]
+[ext_resource type="Texture2D" uid="uid://cvrxskv5f76fa" path="res://sprites/ChurchSofia.png" id="13_r5om4"]
+[ext_resource type="Texture2D" uid="uid://comxyc6tyclb7" path="res://sprites/ChurchTihvin.png" id="17_h75vw"]
+[ext_resource type="Texture2D" uid="uid://byngrpwd4wf0d" path="res://sprites/ChurchSpirit.png" id="17_yy28u"]
+[ext_resource type="Texture2D" uid="uid://26b7npybyb3j" path="res://sprites/Kirha.png" id="18_3mr0t"]
+[ext_resource type="Texture2D" uid="uid://yqjgj271pwya" path="res://sprites/ChurchVarvara.png" id="18_7vxqa"]
+[ext_resource type="Texture2D" uid="uid://bhcbwe2flsig" path="res://sprites/ChurchVladimir.png" id="19_qw8h8"]
+[ext_resource type="Texture2D" uid="uid://b66v8lvutlarr" path="res://sprites/PodvoryeNevskii.png" id="22_4sf5t"]
+[ext_resource type="LabelSettings" uid="uid://b1abavj52rj02" path="res://settings/title_settings.tres" id="24_3mr0t"]
+[ext_resource type="Script" uid="uid://duj6nff15igc2" path="res://info_panel.gd" id="24_6sq2s"]
+[ext_resource type="Texture2D" uid="uid://bn1gonddq4768" path="res://sprites/MonasteryDerzhavnaya.png" id="26_a454a"]
+
+[node name="Map" type="Node2D" unique_id=364325683]
+script = ExtResource("1_p5pve")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1542709858]
+layer = 0
+
+[node name="Map" type="TextureRect" parent="Canvas" unique_id=1247404121]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_urblq")
+
+[node name="Overlay" type="ColorRect" parent="Canvas" unique_id=750668767]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.4)
+
+[node name="CathedralChrist" type="Button" parent="Canvas" unique_id=1246331051 groups=["map_points"]]
+offset_left = 367.0
+offset_top = 331.0
+offset_right = 405.0
+offset_bottom = 375.0
+icon = ExtResource("4_oysan")
+expand_icon = true
+
+[node name="Cathedral3Saints" type="Button" parent="Canvas" unique_id=22245666 groups=["map_points"]]
+offset_left = 786.0
+offset_top = 153.0
+offset_right = 824.0
+offset_bottom = 197.0
+icon = ExtResource("4_4sf5t")
+expand_icon = true
+
+[node name="Church1WW" type="Button" parent="Canvas" unique_id=580839436 groups=["map_points"]]
+offset_left = 901.0
+offset_top = 408.0
+offset_right = 939.0
+offset_bottom = 454.0
+icon = ExtResource("4_jk4ss")
+expand_icon = true
+
+[node name="ChurchAdrian" type="Button" parent="Canvas" unique_id=1580017435 groups=["map_points"]]
+offset_left = 959.0
+offset_top = 532.0
+offset_right = 997.0
+offset_bottom = 576.0
+icon = ExtResource("6_meq34")
+expand_icon = true
+
+[node name="ChurchDimitry" type="Button" parent="Canvas" unique_id=1731345554 groups=["map_points"]]
+offset_left = 256.0
+offset_top = 450.0
+offset_right = 294.0
+offset_bottom = 494.0
+icon = ExtResource("4_jky6x")
+expand_icon = true
+
+[node name="ChurchGeorgiy" type="Button" parent="Canvas" unique_id=1890139591 groups=["map_points"]]
+offset_left = 531.0
+offset_top = 528.0
+offset_right = 569.0
+offset_bottom = 572.0
+icon = ExtResource("6_r5om4")
+expand_icon = true
+
+[node name="ChurchGospodnya" type="Button" parent="Canvas" unique_id=1596851036 groups=["map_points"]]
+offset_left = 356.0
+offset_top = 226.0
+offset_right = 394.0
+offset_bottom = 270.0
+icon = ExtResource("7_jky6x")
+expand_icon = true
+
+[node name="ChurchIoann" type="Button" parent="Canvas" unique_id=1561278496 groups=["map_points"]]
+offset_left = 545.0
+offset_top = 406.0
+offset_right = 583.0
+offset_bottom = 450.0
+icon = ExtResource("8_4sf5t")
+expand_icon = true
+
+[node name="ChurchKazan" type="Button" parent="Canvas" unique_id=1183760775 groups=["map_points"]]
+offset_left = 194.0
+offset_top = 265.0
+offset_right = 232.0
+offset_bottom = 309.0
+icon = ExtResource("9_3mr0t")
+expand_icon = true
+
+[node name="ChurchMichael" type="Button" parent="Canvas" unique_id=1853254122 groups=["map_points"]]
+offset_left = 765.0
+offset_top = 397.0
+offset_right = 803.0
+offset_bottom = 441.0
+icon = ExtResource("11_y1wlr")
+expand_icon = true
+
+[node name="ChurchNevskii" type="Button" parent="Canvas" unique_id=1500559197 groups=["map_points"]]
+offset_left = 830.0
+offset_top = 542.0
+offset_right = 868.0
+offset_bottom = 586.0
+icon = ExtResource("10_6sq2s")
+expand_icon = true
+
+[node name="ChurchPetrPavel" type="Button" parent="Canvas" unique_id=1277718409 groups=["map_points"]]
+offset_left = 986.0
+offset_top = 200.0
+offset_right = 1024.0
+offset_bottom = 244.0
+icon = ExtResource("11_4v3wx")
+expand_icon = true
+
+[node name="ChurchRadoneshskii" type="Button" parent="Canvas" unique_id=910875743 groups=["map_points"]]
+offset_left = 458.0
+offset_top = 92.0
+offset_right = 496.0
+offset_bottom = 136.0
+icon = ExtResource("12_y1wlr")
+expand_icon = true
+
+[node name="ChurchSofia" type="Button" parent="Canvas" unique_id=1705427954 groups=["map_points"]]
+offset_left = 390.0
+offset_top = 524.0
+offset_right = 428.0
+offset_bottom = 568.0
+icon = ExtResource("13_r5om4")
+expand_icon = true
+
+[node name="ChurchSpirit" type="Button" parent="Canvas" unique_id=623891585 groups=["map_points"]]
+offset_left = 1020.0
+offset_top = 410.0
+offset_right = 1058.0
+offset_bottom = 454.0
+icon = ExtResource("17_yy28u")
+expand_icon = true
+
+[node name="ChurchTihon" type="Button" parent="Canvas" unique_id=1887563435 groups=["map_points"]]
+offset_left = 564.0
+offset_top = 275.0
+offset_right = 602.0
+offset_bottom = 319.0
+icon = ExtResource("13_4v3wx")
+expand_icon = true
+
+[node name="ChurchTihvin" type="Button" parent="Canvas" unique_id=487781602 groups=["map_points"]]
+offset_left = 280.0
+offset_top = 209.0
+offset_right = 318.0
+offset_bottom = 253.0
+icon = ExtResource("17_h75vw")
+expand_icon = true
+
+[node name="ChurchVarvara" type="Button" parent="Canvas" unique_id=374222575 groups=["map_points"]]
+offset_left = 248.0
+offset_top = 387.0
+offset_right = 286.0
+offset_bottom = 431.0
+icon = ExtResource("18_7vxqa")
+expand_icon = true
+
+[node name="ChurchVladimir" type="Button" parent="Canvas" unique_id=1766124972 groups=["map_points"]]
+offset_left = 864.0
+offset_top = 287.0
+offset_right = 902.0
+offset_bottom = 331.0
+icon = ExtResource("19_qw8h8")
+expand_icon = true
+
+[node name="Derzhavnaya" type="Button" parent="Canvas" unique_id=640736356 groups=["map_points"]]
+offset_left = 315.0
+offset_top = 364.0
+offset_right = 353.0
+offset_bottom = 407.0
+icon = ExtResource("6_0t07s")
+expand_icon = true
+
+[node name="Gymnasya1" type="Button" parent="Canvas" unique_id=1510558469 groups=["map_points"]]
+offset_left = 367.0
+offset_top = 286.0
+offset_right = 405.0
+offset_bottom = 329.0
+icon = ExtResource("9_2wwcf")
+expand_icon = true
+
+[node name="Kirha" type="Button" parent="Canvas" unique_id=487626866 groups=["map_points"]]
+offset_left = 362.0
+offset_top = 377.0
+offset_right = 400.0
+offset_bottom = 421.0
+icon = ExtResource("18_3mr0t")
+expand_icon = true
+
+[node name="Kypelka" type="Button" parent="Canvas" unique_id=463890378 groups=["map_points"]]
+offset_left = 326.0
+offset_top = 318.0
+offset_right = 364.0
+offset_bottom = 361.0
+icon = ExtResource("5_sb2pt")
+expand_icon = true
+
+[node name="MonasteryDerzhavnaya" type="Button" parent="Canvas" unique_id=154247879 groups=["map_points"]]
+offset_left = 569.0
+offset_top = 331.0
+offset_right = 607.0
+offset_bottom = 375.0
+icon = ExtResource("26_a454a")
+expand_icon = true
+
+[node name="MonasteryEkaterina" type="Button" parent="Canvas" unique_id=1330514255 groups=["map_points"]]
+offset_left = 414.0
+offset_top = 353.0
+offset_right = 452.0
+offset_bottom = 399.0
+icon = ExtResource("7_6qsgm")
+expand_icon = true
+
+[node name="MonasteryElasavet" type="Button" parent="Canvas" unique_id=2115966493 groups=["map_points"]]
+offset_left = 748.0
+offset_top = 222.0
+offset_right = 786.0
+offset_bottom = 266.0
+icon = ExtResource("8_ooc2g")
+expand_icon = true
+
+[node name="PodvoryeNevskii" type="Button" parent="Canvas" unique_id=463346305 groups=["map_points"]]
+offset_left = 184.0
+offset_top = 390.0
+offset_right = 222.0
+offset_bottom = 434.0
+icon = ExtResource("22_4sf5t")
+expand_icon = true
+
+[node name="Skit" type="Button" parent="Canvas" unique_id=610685935 groups=["map_points"]]
+offset_left = 732.0
+offset_top = 174.0
+offset_right = 770.0
+offset_bottom = 218.0
+icon = ExtResource("10_wbpbn")
+expand_icon = true
+
+[node name="InfoPanel" type="Panel" parent="Canvas" unique_id=1552755380]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -411.0
+offset_top = -324.0
+offset_right = -1.0
+offset_bottom = 324.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("24_6sq2s")
+
+[node name="Margin" type="MarginContainer" parent="Canvas/InfoPanel" unique_id=231464690]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="VBox" type="VBoxContainer" parent="Canvas/InfoPanel/Margin" unique_id=639733603]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="Canvas/InfoPanel/Margin/VBox" unique_id=1672971549]
+layout_mode = 2
+
+[node name="PanelTitle" type="Label" parent="Canvas/InfoPanel/Margin/VBox/Header" unique_id=264005331]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Информация"
+label_settings = ExtResource("24_3mr0t")
+
+[node name="CloseBtn" type="Button" parent="Canvas/InfoPanel/Margin/VBox/Header" unique_id=1400950382]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "✕"
+
+[node name="Image" type="TextureRect" parent="Canvas/InfoPanel/Margin/VBox" unique_id=751305683]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 430)
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Canvas/InfoPanel/Margin/VBox" unique_id=1241864860]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Выберите объект на карте"
+label_settings = ExtResource("24_3mr0t")
+horizontal_alignment = 1
